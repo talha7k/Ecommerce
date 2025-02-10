@@ -61,6 +61,9 @@ export default function Featured({product}) {
   function addFeaturedToCart() {
     addProduct(product._id);
   }
+  if (!product) {
+    return <div>Loading product details...</div>; // or any other fallback UI
+  }
   return (
     <Bg>
       <Center>
